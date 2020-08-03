@@ -1,0 +1,12 @@
+Make changes to path accordingly to upload files.
+Change com.yiyuan.v2 to com.yiyuan.v3 to use custom datasource in v3.
+
+./mc cp --attr User.datasourceclass=com.yiyuan.v2.dataloader.datasourceARelation "/home/yy/IntelliJStore/CustomDatasourceYY/data/logA1.txt" myminio/customdatasources/v2/logA1.txt
+
+./mc cp --attr User.datasourceclass=com.yiyuan.v2.dataloader.datasourceARelation "/home/yy/IntelliJStore/CustomDatasourceYY/data/logA2.txt" myminio/customdatasources/v2/logA2.txt
+
+./mc cp --attr User.datasourceclass=com.yiyuan.v2.dataloader.datasourceBRelation "/home/yy/IntelliJStore/CustomDatasourceYY/data/logB1.csv" myminio/customdatasources/v2/logB2.csv
+
+./mc cp --attr User.datasourceclass=com.yiyuan.v2.dataloader.datasourceBRelation "/home/yy/IntelliJStore/CustomDatasourceYY/data/logB2.csv" myminio/customdatasources/v2/logB1.csv
+
+./mc cp --attr User.datasourceclass=com.yiyuan.v2.dataloader.datasourceCRelation "/home/yy/IntelliJStore/CustomDatasourceYY/parquetfile/logC1.parquet" myminio/customdatasources/v2/logC1.parquet

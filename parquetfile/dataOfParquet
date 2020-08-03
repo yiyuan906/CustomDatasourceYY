@@ -1,0 +1,8 @@
+val dummydata = Seq(("2020-06-06","12:12:12","UPDATE","Admin","12312312","Update one")
+    ,("2020-06-06","11:11:11","UPLOAD","User","11111111","upload file to open lib")
+    ,("2020-06-07","10:10:10","UPDATE","Admin","12131415","Update two")
+    ,("2020-06-07","15:15:15","GET","Admin","11112222","Get information from lib Z"))
+val serDdata = Spark.sparkContext.parallelize(dummydata)
+import Spark.implicits._
+val serDF = serDdata.toDF("Date","Time","Action","Role","ActionID","Description")
+serDF.coalesce(1).write.mode("overwrite").parquet("parquetfile")
